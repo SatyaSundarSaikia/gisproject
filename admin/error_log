@@ -1,0 +1,28 @@
+[09-Feb-2024 06:28:02 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/atmaja/admin/enquiry.php on line 58
+[23-Feb-2024 15:22:58 UTC] PHP Warning:  move_uploaded_file(images/service/loader.png): failed to open stream: No such file or directory in /home/myworkstatus/public_html/globaladmin/admin/service.php on line 106
+[23-Feb-2024 15:22:58 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpcNccfu' to 'images/service/loader.png' in /home/myworkstatus/public_html/globaladmin/admin/service.php on line 106
+[29-Feb-2024 06:14:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/globaladmin/admin/check_password.php on line 11
+[29-Feb-2024 06:14:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/globaladmin/admin/check_password.php on line 11
+[29-Feb-2024 06:14:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/globaladmin/admin/check_password.php on line 11
+[29-Feb-2024 06:14:30 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/globaladmin/admin/check_password.php on line 11
+[29-Feb-2024 06:14:30 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/globaladmin/admin/check_password.php on line 11
+[29-Feb-2024 06:14:30 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/globaladmin/admin/check_password.php on line 11
+[29-Feb-2024 06:14:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/globaladmin/admin/check_password.php on line 11
+[29-Feb-2024 06:14:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/globaladmin/admin/check_password.php on line 11
+[29-Feb-2024 06:14:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/globaladmin/admin/check_password.php on line 11
+[23-May-2024 09:28:06 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'myworkstatus_gis'@'localhost' to database 'myworkstatus_gis' in /home/myworkstatus/public_html/gis/admin/database/config.php on line 9
+[23-May-2024 09:28:47 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/gis/admin/session.php on line 9
+[23-May-2024 09:28:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myworkstatus/public_html/gis/admin/session.php:9) in /home/myworkstatus/public_html/gis/admin/session.php on line 14
+[23-May-2024 09:28:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/gis/admin/session.php on line 9
+[23-May-2024 09:28:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myworkstatus/public_html/gis/admin/session.php:9) in /home/myworkstatus/public_html/gis/admin/session.php on line 14
+[23-May-2024 09:29:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/gis/admin/login.php on line 46
+[23-May-2024 09:29:57 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/gis/admin/session.php on line 9
+[23-May-2024 09:29:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myworkstatus/public_html/gis/admin/session.php:9) in /home/myworkstatus/public_html/gis/admin/session.php on line 14
+[23-May-2024 09:29:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/gis/admin/session.php on line 9
+[23-May-2024 09:29:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myworkstatus/public_html/gis/admin/session.php:9) in /home/myworkstatus/public_html/gis/admin/session.php on line 14
+[23-May-2024 09:31:47 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/gis/admin/login.php on line 46
+[23-May-2024 09:46:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/gis/admin/about-us.php on line 47
+[23-May-2024 10:18:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/gis/admin/modal-crud.php on line 6
+[23-May-2024 10:51:10 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/myworkstatus/public_html/gis/admin/index.php on line 4
+[27-May-2024 14:52:57 UTC] PHP Warning:  move_uploaded_file(images/about/1716821578.png): failed to open stream: No such file or directory in /home/myworkstatus/public_html/gis/admin/about-us.php on line 25
+[27-May-2024 14:52:57 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpxQIqDa' to 'images/about/1716821578.png' in /home/myworkstatus/public_html/gis/admin/about-us.php on line 25

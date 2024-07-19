@@ -1,0 +1,761 @@
+html,
+body {
+    height: 90%;
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+
+}
+/* #top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px; /* Adjust the height as needed */
+    /* background-color: #333; Set the background color
+    z-index: 1000; Set the z-index to make sure it's above other elements
+} */
+
+/* Adjust the styling of the bar content as needed */
+/* #top-bar-content {
+    color: brown;
+    padding: 8px;
+} */
+
+#top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: darkslategrey;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#title {
+   
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: bold; /* Add bold styling if desired */
+    color: #fff; /* Set the text color to white or your preferred color */
+    margin: 0 auto; /* Center the title horizontally */
+}
+
+#query_panel_btn {
+    position: absolute;
+    z-index: 600;
+    top: 1%;
+    left: 0.3%;
+}
+
+
+#map {
+    position: absolute;
+    top: 22px; /* Adjust this value to provide space below the top bar */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 30px); /* Adjust to fill the remaining space */
+}
+
+#query_tab {
+    position: absolute;
+    padding: 0.5% 0%;
+    left: 10px;
+    top: 50px; /* Adjust this value to provide space below the top bar */
+    width: 400px;
+    height: 100%;
+    visibility: hidden;
+    overflow: scroll;
+    background-color: #C6EFEB;
+}
+
+/*
+#map {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    //  border-style: solid;
+    // border-color: black;
+    // border-width: thin;
+
+} */
+
+
+/* #query_tab {
+    position: absolute;
+    padding: 0.5% 0%;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    //border-style: solid;
+    //border-color: black;
+    //border-width: thin;
+    visibility: hidden;
+    //overflow: scroll;
+
+} */
+
+
+
+.ol-dragbox {
+    border: 2px dashed grey;
+    background-color: rgba(200, 200, 200, 0.6);
+  }
+  
+  .ziButtonDiv {
+    position: relative;
+    display: block;
+    margin: 1px auto auto 10px;
+  }
+  
+  .draggable-area {
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    cursor: move;
+  }
+  
+  .print-header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .print-icon {
+    z-index: 500;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  @media print {
+    .print-header {
+        display: block;
+    }
+    #map {
+        height: 80%; /* Adjust according to header height */
+    }
+  }
+  
+#legend {
+    z-index: 11;
+    padding: 2px 4px;
+    border: 1px solid grey;
+    position: absolute;
+    bottom: 7%;
+    height: 0%;
+    overflow: scroll;
+    width: 0%;
+    right: 0%;
+    z-index: 10000;
+    background-color: #ffffff;
+    font-weight: bold;
+    visibility: hidden;
+
+}
+
+#layer {
+    position: relative;
+    width: 85%;
+    left:5px;
+}
+
+#attributes {
+    position: relative;
+    width: 85%;
+    left:5px;
+}
+
+#operator {
+    position: relative;
+    width: 85%;
+    left:5px;
+}
+
+#value {
+    position: relative;
+    width: 85%;
+    left:5px;
+}
+
+#layer1 {
+    position: relative;
+    width: 85%;
+    left:5px;
+}
+
+#draw_type {
+    position: relative;
+    width: 85%;
+    left:5px;
+}
+
+
+#table_data {
+    position: absolute;
+    bottom: 0%;
+    overflow: scroll;
+    left: 0%;
+    right: 0%;
+    height: 0%;
+    border: 1px solid #4CAF50;
+}
+
+#table {
+    white-space: nowrap;
+    grid-template-areas: "head-fixed""body-scrollable";
+}
+
+
+#table th {
+    position: -webkit-sticky;
+    /* for Safari */
+    position: sticky;
+    top: 0px;
+    background-color: #e9ecef;;
+}
+/*
+#wms_layers_btn {
+    position: absolute;
+    z-index: 600;
+    top: 50%;
+    left: 1%; /* Adjust this value to control the distance from the left */
+    /* transform: translateY(-50%);
+} */
+
+
+#legend_btn {
+    position: absolute;
+    z-index: 600;
+    bottom: 2%;
+    right: 0%;
+    top: 94%;
+    background-color:#2b3742;
+}
+
+
+#table_wms_layers {
+    white-space: nowrap;
+    grid-template-areas: "head-fixed""body-scrollable";
+}
+
+#table_wms_layers th {
+    position: -webkit-sticky;
+    /* for Safari */
+    position: sticky;
+    top: 0px;
+    background-color: #e9ecef;
+}
+
+
+.modal-dialog {
+    max-width: 60% !important;
+    height: 60% !important;
+    top: 18% !important;
+
+
+}
+
+/*.form-select {
+    left: 0%;
+    width: 85% !important;
+
+}*/
+
+/*.form-control {
+    left: 0%;
+    width: 85% !important;
+
+}*/
+#clear_btn {
+    border:none;
+    position: absolute;
+    z-index: 500;
+    top: 53%; /* Adjust this value to position it below #wms_layers_btn */
+    left: 0.5em; /* Align it with #wms_layers_btn */
+    transform: translateY(-50%);
+    padding:  1px 3px;
+    background-color: #3D9B00;
+}
+
+#full-screen-btn {
+    border: none;
+    padding: 1px 3px;
+    position: absolute; /* Use fixed positioning for absolute placement */
+    top: 56%; /* Adjust the top position */
+    left: 0.5em; /* Adjust the right position */
+    cursor: pointer;
+    z-index: 1000;
+    background-color: #9B001F;
+}
+#print-map-btn {
+    border:none;
+    padding: 6px 3px;
+    position: absolute;
+    z-index: 600;
+    top: 63%;
+    left: 0.4em; /* Adjust this value based on your layout */
+    transform: translateY(-50%);
+    background-color: #5C72B2;
+
+}
+#trackbtn2 {
+    border:none;
+    padding: 4px 3px;
+    position: absolute;
+    z-index: 600;
+    top: 80%;
+    left: 0.3em; /* Adjust this value based on your layout */
+    transform: translateY(-50%);
+    background-color: #181111;
+
+}
+#add-layer-btn {
+    border: none;
+    padding: 1px 3px;
+    position: absolute; /* Use fixed positioning for absolute placement */
+    top: 81%; /* Adjust the top position */
+    left: 0.5em; /* Adjust the right position */
+    cursor: pointer;
+    z-index: 1000;
+    background-color: #B87CB2;
+
+}
+
+
+
+#wms_layers_btn {
+    border:none;
+    padding: 4px 3px;
+    position: absolute;
+    z-index: 600;
+    top: 69%;
+    left: 0.5em; /* Adjust this value based on your layout */
+    transform: translateY(-50%);
+    background-color: rgb(102, 44, 44);
+}
+
+#trackBtn1 {
+    position: absolute;
+    border:none;
+    padding: 1px 3px;
+    z-index: 3000;
+    top: 30px;
+    left: 9px;
+    background-color: gainsboro;
+ 
+   
+}
+
+
+#info_btn {
+    border:none;
+    position: absolute;
+    z-index: 500;
+    padding: 1px 3px;
+    width:1.6%;
+    height:3%;
+    top: 61%; /* Adjust this value to position it below #wms_layers_btn */
+    left: 0.3%; /* Align it with #wms_layers_btn */
+    transform: translateY(-50%);
+    background-color: gainsboro;
+    display:none;
+}
+
+
+
+
+#measuretype {
+   
+        position: absolute;
+        z-index: 500;
+        padding: 5px 18px;
+        top: 85%;
+        left: 0.3%;
+        width: 2%;
+        transform: translateY(-50%);
+        background-color: rgba(14, 177, 226, 0.692)
+    }
+
+    #layer-btn {
+        border:none;
+        padding: 1px 3px;
+        position: absolute;
+        z-index: 600;
+        top: 55%;
+        left: 0.3%; /* Adjust this value based on your layout */
+        transform: translateY(-50%);
+        background-color: gainsboro;
+        display: none;
+   
+    }
+
+
+    .btn-group1 {
+        z-index: 1000;
+        border: none;
+        padding: 0px 0px;
+        position: absolute; /* Use fixed positioning for absolute placement */
+        top: 7%; /* Adjust the top position */
+        left: 0.3%; /* Adjust the right position */
+        cursor: pointer;
+        font-size: 0.8rem;
+        margin-left: 1px
+     }
+
+/* Add custom styling for the measure button icon */
+.btn-group .btn.measure-btn-icon {
+   
+    color: #fff; /* Text color */
+}
+
+/* Adjust position if needed */
+.btn-group {
+   z-index: 1000;
+   border: none;
+   padding: 0px 3px;
+   position: absolute; /* Use fixed positioning for absolute placement */
+   top: 55%; /* Adjust the top position */
+   left: 0%; /* Adjust the right position */
+   cursor: pointer;
+   font-size: 0.8rem;
+}
+
+/* Style the dropdown menu */
+.btn-group .dropdown-menu.measure-dropdown {
+    background-color:grey; /* Background color of the dropdown menu */
+    color: #fff; /* Text color */
+}
+
+.btn-group .dropdown-menu.measure-dropdown a {
+    color: #fff; /* Text color of dropdown items */
+}
+
+.btn-group .dropdown-menu.measure-dropdown a:hover {
+    background-color: blue; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
+
+#scale_bar {
+
+    position: absolute;
+    z-index: 500;
+    bottom: 0%;
+    left: 3%;
+}
+
+
+.ol-popup-content {
+
+    max-width: 500px;
+}
+
+.ol-scale-step-text {
+    /* //color: red; */
+}
+
+.ol-scale-text {
+    /* //color: red; */
+    font-weight: bold;
+}
+
+.layer-switcher.shown {
+    max-height: 465px;
+}
+
+.ol-control button {
+    background-color: rgba(40, 40, 40, 0.8) !important;
+}
+
+.ol-control button:hover {
+    background-color: rgba(40, 40, 40, 1) !important;
+}
+
+.ol-mouse-position {
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #50b787;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.ol-zoom-extent {
+    top: 47%;
+    left: 0.5em;
+    position: absolute;
+}
+
+.ol-zoomslider {
+    top: 3.8em;
+    left: 0.5em;
+    position: absolute;
+    height: 200px;
+}
+
+.ol-geocoder.gcd-gl-container {
+    top: 40%;
+    left: 0.5em;
+    position: absolute;
+}
+
+
+
+.tooltip {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.tooltip-measure {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.tooltip-static {
+    background-color: #ffcc33;
+    color: black;
+    border: 1px solid white;
+}
+
+.tooltip-measure:before,
+.tooltip-static:before {
+    border-top: 6px solid rgba(0, 0, 0, 0.5);
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    margin-left: -7px;
+    left: 50%;
+}
+
+.tooltip-static:before {
+    border-top-color: #ffcc33;
+}
+
+
+
+.icon-container {
+    position: absolute;
+    display: inline-block;
+    z-index:5000;
+   
+}
+
+.icon {
+    border:none;
+    position: absolute;
+    top: 565px;
+    left: 0.15em;
+    font-size: 35px;
+    cursor: pointer;
+    background-color: gainsboro;
+    display:none;
+}
+
+.icon-content {
+    position: absolute;
+    top: 565px;
+    left: 3.5em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    z-index:5000;
+}
+
+live search functionality in openlayer
+
+
+.search {
+    display: inline-block;
+    position: absolute;
+
+    bottom: 109px;
+    right: 194px;
+    height: 30px;
+    width: 30px;
+    box-sizing: border-box;
+    /* 0px 8px 7px 0px; */
+    margin-left: -35px;
+    padding: 7px 9px 0px 9px;
+    border: 3px solid rgba(60, 116, 189, 0.3);
+    background-color: rgba(155, 192, 241, 0.3);
+    border-radius: 25px;
+    transition: all 200ms ease;
+    cursor: text;
+}
+
+.search:after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    height: 20px;
+    width: 3px;
+    right: -5px;
+    background: #ffffff;
+   border-radius: 3px;
+    transform: rotate(-45deg);
+    transition: all 200ms ease;
+}
+ .search.active,
+     .search:hover {
+        width: 300px;
+        margin-right: 0px;
+        margin-left: -305px;
+        background-color: rgba(155, 192, 241, 0.7);
+     }
+.search:after {
+    height: 0px;
+}
+
+.input_search {
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    font-size: 15px;
+    color: inherit;
+    background: transparent;
+    outline-width: 0px;
+}
+
+/* ***start : CSS for search bar *** */
+
+
+
+
+/* live location search  */
+
+
+/* #btnCrosshair {
+    z-index: 3;
+    position: absolute;
+    background-color: rgba(40, 40, 40, 1);
+    top: 779px;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    color: white;
+    }
+
+#btnCrosshair .clicked {
+    color: red;
+} */
+
+/*
+# {
+    z-index: 3;
+    position: absolute;
+    background-color: rgba(40, 40, 40, 1);
+    top: 779px;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    color: white;
+    } */
+
+
+
+    #trackBtn {
+        border:none;
+    padding: 1px 3px;
+    position: absolute;
+    z-index: 600;
+    top: 75%;
+    left: 0.5em; /* Adjust this value based on your layout */
+    transform: translateY(-50%);
+    background-color: #E19585;
+     
+       
+    }
+
+    /* attributequery */
+
+    .attQueryDiv {
+        position: absolute;
+        display: none;
+        margin: 70px auto auto 45px;
+        /* padding: 10px; */
+        width: 250px;
+        /* height: 250px; */
+        background-color: rgba(255, 255, 255, 0.9);
+        font-family: inherit;
+        font-size: 1em;
+        line-height: 1.45;
+        border-radius: 2px;
+        border: 1px solid #d1d1d1;
+        box-shadow: 0px 0px 15px rgba(252, 213, 213, 0.5);
+        /* z-index: 4; /*
+        /* overflow: scroll; */
+    }
+   
+    #headerDiv{
+        background-color: midnightblue;
+        height: 35px;
+    }
+    #headerDiv label{
+        color: white;
+    }
+    .attQueryDiv select {
+        width: 225px;
+        height: 35px;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        margin: 0px auto 0px 10px;
+    }
+    .attQueryDiv input {
+        width: 225px;
+        height: 35px;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        margin: 0px auto 0px 10px;
+    }
+    .attQueryDiv label{
+        color: grey;
+        margin: 10px 10px 0px 10px;
+    }
+    .attQueryDiv label:nth-child(1){
+        margin:10px;
+        font-weight: bold;
+    }
+    
+    .attQryRun {
+        color: white;
+        background-color: green;
+        border-radius: 3px;
+        border: 1px solid darkgreen;
+        height: 35px;
+        width: 50px;
+        margin:10px;
+    }
+
+    .myButtonDiv {
+        position: relative;
+        display:block;
+        margin: 1px auto auto 10px;
+    }
+
